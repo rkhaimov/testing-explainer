@@ -1,34 +1,63 @@
-Four pillars:
-Protection against regressions: Low on false negatives
-Resistance to refactoring: Low amount of false positives
-Maintainability:
-How hard it is to run the test
-How hard it is to understand the test
-How hard its is to write the test
-Fast feedback: Fast tests allow noticing bugs quickly, reducing the cost of fixing them
+# The goal of testing
+ The state of unit testing
+ The goal of unit testing
+ Consequences of having a bad test suite
+ Using coverage metrics to measure test
+suite quality
+ Attributes of a successful test suite
 
-Demonstrate confusion matrix on first two items (Probably add matrix such as recall and precision)
+# What is a unit test
+ What a unit test is
+ The differences between shared, private,
+and volatile dependencies
+ The two schools of unit testing: classical
+and London
+ The differences between unit, integration,
+and end-to-end tests
 
-Tests should verify only the end result, not implementation detail. Which is meaningful to a client
+# The anatomy of a unit test
+ The structure of a unit test
+ Unit test naming best practices
+ Working with parameterized tests
+ Working with fluent assertions
 
-Stubs vs Mocks
-CQS
-Mocks are commands
-Stubs are queries
+# The four pillars of a good unit test
+ Exploring dichotomies between aspects of a
+good unit test
+ Defining an ideal test
+ Understanding the Test Pyramid
+ Using black-box and white-box testing
 
-You should verify only the observable for client behaviour.
-Usually it means verifying only interactions with mocks.
-But there are cases when stubs should also be verified (for example when call order or call count or call args are important)
+# Mocks and test fragility
+ Differentiating mocks from stubs
+ Defining observable behavior and implementation details
+ Understanding the relationship between mocks and test fragility
+ Using mocks without compromising resistance to refactoring
 
-Styles of unit testing (Compare them using good test attributes):
-Output based - the best
-Communication based - meh
-State based - worst
+# Styles of unit testing
+ Comparing styles of unit testing
+ The relationship between functional and hexagonal architectures
+ Transitioning to output-based testing
 
-SUT and three sections of a test
+# Refactoring toward valuable unit tests
+ Recognizing the four types of code
+ Understanding the Humble Object pattern
+ Writing valuable tests
 
-The most important things are these two:
-Protection against regressions: Low on false negatives
-Resistance to refactoring: Low amount of false positives
+# Why integration testing
+ Understanding the role of integration testing
+ Diving deeper into the Test Pyramid concept
+ Writing valuable integration tests
 
-Reread functional architecture 150 page
+# Mocking best practices
+ Maximizing the value of mocks
+ Replacing mocks with spies
+ Mocking best practices
+
+# Testing the database ?
+
+# Unit testing anti-patterns
+ Unit testing private methods
+ Exposing private state to enable unit testing
+ Leaking domain knowledge to tests
+ Mocking concrete classes
